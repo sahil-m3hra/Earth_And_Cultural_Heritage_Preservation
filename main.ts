@@ -2,6 +2,9 @@ namespace SpriteKind {
     export const Button = SpriteKind.create()
     export const arivan = SpriteKind.create()
 }
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile1`, function (sprite, location) {
+	
+})
 function Scene1 () {
     scene.setBackgroundImage(img`
         ................................................................................................................................................................
@@ -403,6 +406,9 @@ function Scene1 () {
     game.splash("\"Do you know?\"", "\"We Lose Around 10 Million Hectares of Forest Every Single Year.\"")
     game.splash("\"Do you know?\"", "\"Deforestation Contributes about 4.8 Billion Tonnes of Carbon Dioxide A Year.\"")
 }
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+	
+})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Button, function (sprite, otherSprite) {
     if (otherSprite == Play && controller.A.isPressed()) {
         level = 1
