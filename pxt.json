@@ -1,5 +1,5 @@
 {
-    "name": "Menu",
+    "name": "Save Earth",
     "description": "",
     "dependencies": {
         "device": "*",
@@ -8,7 +8,8 @@
         "feather": "*",
         "corgio": "*",
         "controller": "*",
-        "edge-connector": "*"
+        "edge-connector": "*",
+        "arcade-story": "github:microsoft/arcade-storytelling#v1.0.3"
     },
     "files": [
         "main.blocks",
@@ -18,7 +19,8 @@
         "tilemap.g.jres",
         "tilemap.g.ts",
         "images.g.jres",
-        "images.g.ts"
+        "images.g.ts",
+        "main.py"
     ],
     "testFiles": [
         "test.ts"
