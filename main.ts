@@ -884,8 +884,9 @@ function Menu () {
     }
 }
 function PlayGame () {
+    Play.destroy()
     game.splash("turn off all the computer ")
-    info.startCountdown(600)
+    info.startCountdown(300)
     info.setLife(3)
     info.setScore(0)
     tiles.setCurrentTilemap(tilemap`level8`)
@@ -987,9 +988,18 @@ function PlayGame () {
         ........................
         ........................
         `, SpriteKind.cutTree)
+    mySprite3.setPosition(500, 180)
+    mySprite2.setPosition(132, 97)
+    mysprite4.setPosition(106, 89)
 }
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile10`, function (sprite, location) {
     tiles.setTileAt(location, assets.tile`myTile11`)
+    info.changeScoreBy(1)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile51`, function (sprite, location) {
+    game.showLongText("Press A to regrow this tree", DialogLayout.Bottom)
+    tiles.setTileAt(location, sprites.castle.tileGrass1)
+    tiles.setTileAt(location, assets.tile`myTile37`)
     info.changeScoreBy(1)
 })
 function PlayStory () {
