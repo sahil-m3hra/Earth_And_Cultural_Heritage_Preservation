@@ -3,7 +3,12 @@
     "description": "",
     "dependencies": {
         "device": "*",
-        "animation": "*"
+        "animation": "*",
+        "sprite-scaling": "*",
+        "feather": "*",
+        "corgio": "*",
+        "controller": "*",
+        "edge-connector": "*"
     },
     "files": [
         "main.blocks",
